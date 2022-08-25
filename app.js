@@ -34,8 +34,20 @@ app.use(xss());
 app.use(mongoSanitizer());
 app.use(compression());
 
-app.use('/',(req,res,next) => {
-    res.send('welcome world');
+app.use('/home',(req,res,next) => {
+    res.status(200).render('home', {
+        title: "Home Page",
+    })
+})
+app.use('/register',(req,res,next) => {
+    res.status(200).render('registration', {
+        title: "Home Page",
+    })
+})
+app.use('/employees',(req,res,next) => {
+    res.status(200).render('home', {
+        title: "Home Page",
+    })
 })
 
 app.all('*', (req,res,next) => {

@@ -1,0 +1,92 @@
+extends base
+
+block content
+    section.reg#contact.contact-area.pt-120.pb-120
+      .container
+        .row.justify-content-center
+          .col-lg-4
+            .section-title.text-center.pb-20.wow.fadeInUp(data-wow-duration='1s' data-wow-delay='0.3s')
+              h6.sub-title Registration
+              h4.title
+                | Get In 
+                span Touch.
+            // section title
+        // row
+        .row.d-flex.justify-content-center
+          .col-lg-8
+            .card.pb-25.pt-25.pl-25.pr-25
+              .contact-wrapper-form.pt-50.wow.fadeInUpBig(data-wow-duration='1s' data-wow-delay='0.5s')
+                h4.contact-title
+                  i.lni-envelope
+                  |  Instant 
+                  span Job Opertunity.
+                form#contact-form(action='' method='post')
+                  .row
+                    .col-md-6
+                      .contact-form.mt-25
+                        label Enter Your Name
+                        input.border(type='text' name='name' placeholder='Some One')
+                      // contact-form
+                    .col-md-6
+                      .contact-form.mt-25
+                        label Enter Your Email
+                        input.border(type='email' name='email' placeholder='someone@example.com')
+                    .col-md-6
+                      .contact-form.mt-25
+                        label Enter Phone Number
+                        input.border(type='text' name='mobile-number' placeholder='+91 9092909209')
+                      // contact-forms
+                    .col-md-6
+                        .contact-form.mt-25
+                          label Job Role You Are Looking For
+                            .dropdown.border.rounded.mt-25
+                              button.d-flex.justify-content-between.align-items-center.w-100.btn.btn-lg.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                | Select Here
+                                .dropdown-menu.w-100(aria-labelledby='dropdownMenuButton')
+                                  a.dropdown-item(href='#') Nodejs
+                                  a.dropdown-item(href='#') React Native
+                                  a.dropdown-item(href='#') Flutter
+                                  a.dropdown-item(href='#') Html Css Developer
+                                  a.dropdown-item(href='#') Java
+                                  a.dropdown-item(href='#') Php Backend Developer
+                    .col-md-6
+                      .contact-form.mt-25
+                        label You Work Experience
+                        input.border(type='number' name='experience' placeholder='1-5 years of experience' min=0 max=10)
+                    p.form-message
+                    .col-md-12
+                      .contact-form.mt-25
+                        button.main-btn(type='submit') Send Now
+
+
+
+        ///////////////////////////////////////////////////
+        .contact-info.pt-30
+          .row
+            .col-lg-4.col-md-6
+              .single-contact-info.contact-color-1.mt-30.d-flex.wow.fadeInUp(data-wow-duration='1s' data-wow-delay='0.3s')
+                .contact-info-icon
+                  i.lni-map-marker
+                .contact-info-content.media-body
+                  p.text
+                    | 21 King Street, Melbourne 
+                    br
+                    |  Victoria, 1202 Australia.
+              // single contact info
+            .col-lg-4.col-md-6
+              .single-contact-info.contact-color-2.mt-30.d-flex.wow.fadeInUp(data-wow-duration='1s' data-wow-delay='0.6s')
+                .contact-info-icon
+                  i.lni-envelope
+                .contact-info-content.media-body
+                  p.text hello@uideck.com
+                  p.text support@uideck.com
+              // single contact info
+            .col-lg-4.col-md-6
+              .single-contact-info.contact-color-3.mt-30.d-flex.wow.fadeInUp(data-wow-duration='1s' data-wow-delay='0.9s')
+                .contact-info-icon
+                  i.lni-phone
+                .contact-info-content.media-body
+                  p.text +99 000 1111 555
+                  p.text +88 999 5555 444
+
+                  ///////////////////////////////////////////////////////////////
