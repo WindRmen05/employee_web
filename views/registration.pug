@@ -20,27 +20,28 @@ block content
                   i.lni-envelope
                   |  Instant 
                   span Job Opertunity.
-                form#contact-form(action='' method='post')
+                  //- (action='' method='post')
+                form#contact-form
                   .row
                     .col-md-6
                       .contact-form.mt-25
                         label Enter Your Name
-                        input.border(type='text' name='name' placeholder='Some One')
+                        input#name.border(type='text' name='name' placeholder='Some One')
                       // contact-form
                     .col-md-6
                       .contact-form.mt-25
                         label Enter Your Email
-                        input.border(type='email' name='email' placeholder='someone@example.com')
+                        input#email.border(type='email' name='email' placeholder='someone@example.com')
                     .col-md-6
                       .contact-form.mt-25
                         label Enter Phone Number
-                        input.border(type='text' name='mobile-number' placeholder='+91 9092909209')
+                        input#mobile.border(type='text' name='mobile-number' placeholder='+91 9092909209')
                       // contact-forms
                     .col-md-6
                         .contact-form.mt-25
                           label Job Role You Are Looking For
                             .dropdown.border.rounded.mt-25
-                              button.d-flex.justify-content-between.align-items-center.w-100.btn.btn-lg.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                              button#jobroles.d-flex.justify-content-between.align-items-center.w-100.btn.btn-lg.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
                                 | Select Here
                                 .dropdown-menu.w-100(aria-labelledby='dropdownMenuButton')
                                   a.dropdown-item(href='#') Nodejs
@@ -52,8 +53,8 @@ block content
                     .col-md-6
                       .contact-form.mt-25
                         label You Work Experience
-                        input.border(type='number' name='experience' placeholder='1-5 years of experience' min=0 max=10)
-                    p.form-message
+                        input#exp.border(type='number' name='experience' placeholder='1-5 years of experience' min=0 max=10)
+                    //- p.form-message
                     .col-md-12
                       .contact-form.mt-25
                         button.main-btn(type='submit') Send Now

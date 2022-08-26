@@ -4,12 +4,14 @@
   "description": "employee_registration website",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "watch:js": "parcel watch ./public/js/registration/dom_operations.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "Aravind KB",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "axios": "^0.27.2",

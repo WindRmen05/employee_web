@@ -8,6 +8,9 @@ const compression = require('compression');
 const xss = require('xss-clean');
 const mongoSanitizer = require('express-mongo-sanitize');
 
+const employeeRouter = require('./routes/employeeRoutes');
+const viewRouter = require('./routes/viewRoutes');
+
 const AppError = require('./utils/appError');
 
 const app = express();
@@ -29,26 +32,14 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 app.use(express.urlencoded({extended: true, limit: '10kb'}));
+app.use(express.json());
 app.use(cookieParser());
 app.use(xss());
 app.use(mongoSanitizer());
 app.use(compression());
 
-app.use('/home',(req,res,next) => {
-    res.status(200).render('home', {
-        title: "Home Page",
-    })
-})
-app.use('/register',(req,res,next) => {
-    res.status(200).render('registration', {
-        title: "Home Page",
-    })
-})
-app.use('/employees',(req,res,next) => {
-    res.status(200).render('home', {
-        title: "Home Page",
-    })
-})
+app.use('/',viewRouter);
+app.use('/register',employeeRouter);
 
 app.all('*', (req,res,next) => {
     next(new AppError(`Can't find ${req.originalUrl} on this server.`, 404));
