@@ -466,6 +466,30 @@ p {
       02.HEADER css 
 ===========================*/
 /*===== register =====*/
+#jobName {
+  color:#000;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+.employee {
+  background-image: url('/images/page-banner-1.jpg');
+  width: 100vw;
+  height: 110vh;
+}
+#img-holder {
+  background-color: #0077B5;
+}
+
+.alert {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top:0;
+  text-align: center;
+}
 .reg {
   background-image: url('../images/page-banner-1.jpg');
   /* background-position: center center; */

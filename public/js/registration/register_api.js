@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import {showAlert} from 
+import {showAlert} from './alert';
 
 export const createEmployee = async (data) => {
     try {
@@ -12,9 +12,13 @@ export const createEmployee = async (data) => {
         });
 
         if(res.data.status === 'success') {
+            showAlert('success',"Employee created successfully!!");
             console.log('employee created success!!');
+        } else {
+            showAlert('danger',res);
         }
     }catch(e) {
+        showAlert('danger',e);
         console.log(e);
     }
 }

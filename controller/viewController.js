@@ -15,7 +15,7 @@ exports.viewRegister = catchAsync(async (req, res, next) => {
 
 exports.viewEmployees = catchAsync(async (req, res, next) => {
     const data = await Employee.find();
-    res.status(200).render('registration', {
+    res.status(200).render('employees', {
         title: 'All Employees',
         data
     });

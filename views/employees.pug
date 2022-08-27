@@ -1,0 +1,40 @@
+extends base
+
+block content
+    section.employee.pt-120.pb-120
+        .col
+            each p in data
+                .w-70.job-box.bg-white.d-md-flex.align-items-center.mb-30.border.rounded.pr-10.pl-10.pb-10.pt-10
+                        .job-left.my-4.d-md-flex.text-center.align-items-center.justify-content-center.text-white.text-center.flex-wrap.bg-dark#jobName.rounded-circle.pr-2.pl-2.pb-2.pt-2=p.jobRole
+                        .job-content
+                                h5.text-center.text-md-left
+                                    ul.d-md-flex.flex-wrap.text-capitalize.ff-open-sans
+                                        li.mr-md-4.d-md-flex
+                                            .col
+                                                .row
+                                                    .text-lowercase.text-secondary.lead name
+                                                .row
+                                                    i.zmdi.zmdi-pin.mr-2=p.name
+                                        li.mr-md-4.d-md-flex
+                                            .col
+                                                .row
+                                                    .text-lowercase.text-secondary.lead email
+                                                .row
+                                                    i.zmdi.zmdi-pin.mr-2=p.email
+                                        li.mr-md-4.d-md-flex
+                                            .col
+                                                .row
+                                                    .text-lowercase.text-secondary.lead mobile
+                                                .row
+                                                    i.zmdi.zmdi-pin.mr-2=p.mobile
+                                        li.mr-md-4.d-md-flex
+                                            .col
+                                                .row
+                                                    .text-lowercase.text-secondary.lead experience
+                                                .row
+                                                    i.zmdi.zmdi-pin.mr-2=p.experience
+                        //- .job-right.my-4.flex-shrink-0
+                        //-     as.d-block.w-100.d-sm-inline-block.btn-light(href='#')=p.id
+
+
+
